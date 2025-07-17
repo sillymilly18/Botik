@@ -24,7 +24,7 @@ func (d *DI) Bot(ctx context.Context) *telego.Bot {
 
 func (d *DI) BotQuestionManager(ctx context.Context) *telegram_question.Manager {
 	return diut.Once(ctx, func(ctx context.Context) *telegram_question.Manager {
-		return telegram_question.New(d.Bot(ctx), d.BotHandler(ctx))
+		return telegram_question.New(d.Log(ctx), d.Bot(ctx), d.BotHandler(ctx))
 	})
 }
 
