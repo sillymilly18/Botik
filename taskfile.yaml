@@ -9,6 +9,11 @@ env:
   SERVER_CONFIG_PATH: ./config/local.json
 
 tasks:
+  prod:
+    desc: "🚀 Start bot within docker"
+    cmds:
+      - docker compose -f docker-compose.dev.yaml up --build --detach
+
   dev:start:db:
     desc: "Start Postgres (dev)"
     status:

@@ -15,5 +15,18 @@ services:
       timeout: 5s
       retries: 5
 
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: itmo-stars-app
+    volumes:
+      - ./config/local.json:/app/config/local.json:ro
+    environment:
+      CONFIG_PATH: /app/config/local.json
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
 volumes:
   postgres_data:
