@@ -1,0 +1,57 @@
+version: '3'
+silent: true
+
+vars:
+  COMPOSE_DEV_FILE: docker-compose.dev.yaml
+  GO_MIGRATOR_ENTRYPOINT: cmd/migrator/main.go
+
+env:
+  SERVER_CONFIG_PATH: ./config/local.json
+
+tasks:
+  dev:start:db:
+    desc: "Start Postgres (dev)"
+    status:
+      - docker compose -f {{.COMPOSE_DEV_FILE}} ps --services --filter status=running | grep -q '^postgres$'
+    cmds:
+      - echo "🚀 Starting Postgres (dev)…"
+      - docker compose -f {{.COMPOSE_DEV_FILE}} up -d postgres
+
+  dev:migrate:
+    desc: "Run Go migrations locally"
+    deps: [dev:start:db]
+    cmds:
+      - echo "🏃 Running migrations…"
+      - go run {{.GO_MIGRATOR_ENTRYPOINT}}
+
+  docker:migrate:
+    desc: "Run migrations in Docker"
+    deps: [dev:start:db, build:migrator]
+    cmds:
+      - echo "🐳 Executing migrator in Docker…"
+      - docker run --rm --network host migrator:latest
+
+  build:migrator:
+    desc: "Build migrator Docker image"
+    cmds:
+      - docker build -f migrator.Dockerfile -t migrator:latest .
+
+  dev:
+    desc: "Run main service with hot-reload"
+    deps: [dev:start:db]
+    watch: true
+    method: timestamp
+    sources:
+      - '**/*.go'
+      - '**/*.env'
+      - './config/*.json'
+    interactive: true
+    dir: '{{.ROOT_DIR}}'
+    preconditions:
+      - rm -rf {{.ROOT_DIR}}/.task
+    cmds:
+      - defer: rm -rf {{.ROOT_DIR}}/.task
+      - echo "🔫 Killing previous server if exists..."
+      - kill $(cat .server.pid 2>/dev/null) 2>/dev/null || true
+      - echo "🚀 Starting server…"
+      - bash -c 'go run ./cmd/app/main.go 2>&1 | tee .server.log & echo $! > .server.pid'

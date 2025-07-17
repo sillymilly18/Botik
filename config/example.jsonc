@@ -1,0 +1,23 @@
+{
+  "env": "dev",
+  "database": {
+    "postgres": {
+      "host": "localhost",
+      "username": "mila",
+      "password": "2335",
+      "database": "app",
+      "port": "5432",
+      "migrations_path": "./migrations"
+    }
+  },
+  "telegram": {
+    "token": "bot token"
+  },
+  "open_ai": {
+    "token": "token here"
+  },
+  "info_channels": {
+    "general": "most_official",
+    "alarms": "lpr1_Crimea_Alarm"
+  }
+}

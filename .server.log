@@ -1,0 +1,35 @@
+2025-07-18T00:36:31+02:00 💬 INFO  connecting to postgresql database...
+[[34mFri Jul 18 00:36:31 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+2025-07-18T00:36:31+02:00 💬 INFO  connected to postgresql
+2025-07-18T00:36:31+02:00 💬 INFO  go telegram bot! {"instance":"telegram"}
+2025-07-18T00:36:31+02:00 💬 INFO  go river! {"instance":"river"}
+[[34mFri Jul 18 00:36:39 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:36:39 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:36:47 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:36:47 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:36:55 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:36:55 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:37:03 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:37:03 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:37:11 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:37:11 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:37:19 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:37:19 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:37:27 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:37:27 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:37:35 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:37:35 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:37:43 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:37:43 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:37:52 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:37:52 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:38:00 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:38:00 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:38:08 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:38:08 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:38:16 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:38:16 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+[[34mFri Jul 18 00:38:24 CEST 2025[0m] [33mDEBUG[0m API response getUpdates: Ok: true, Err: [<nil>], Result: []
+[[34mFri Jul 18 00:38:24 CEST 2025[0m] [33mDEBUG[0m API call to: "https://api.telegram.org/botBOT_TOKEN/getUpdates", with data: {"timeout":8}
+2025-07-18T00:38:26+02:00 💬 INFO  closer function done {"fn_number":1}
+2025-07-18T00:38:26+02:00 💬 INFO  closer function done {"fn_number":2}

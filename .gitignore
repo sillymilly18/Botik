@@ -1,0 +1,69 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+dist
+.task
+tmp
+/out-tsc
+
+/pkg/gen
+
+prod.env
+.env
+.sshkey
+
+/config/*
+!/config/example.jsonc
+
+# dependencies
+node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Compiled Object files, Static and Dynamic libs
+*.o
+*.a
+*.so
+*.exe
+*.exe~
+*.dll
+*.dylib
+*.test
+*.out
+
+# Binary folder
+bin/
+
+# Go compiled binaries from cmd/
+user_bot
+import_collections
+competitor_nfts_parser
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+.nx
