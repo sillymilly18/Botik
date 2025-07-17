@@ -72,7 +72,7 @@ func (d *DI) RiverClient(ctx context.Context) *river.Client[pgx.Tx] {
 
 		periodicJobs := []*river.PeriodicJob{
 			river.NewPeriodicJob(
-				river.PeriodicInterval(time.Minute),
+				river.PeriodicInterval(time.Hour),
 				func() (river.JobArgs, *river.InsertOpts) {
 					return workernotify.WorkerArgs{}, nil
 				},
