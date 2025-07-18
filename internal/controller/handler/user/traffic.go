@@ -96,7 +96,7 @@ func (h *Handler) traffic(ctx *telegohandler.Context, message telego.Message) er
 
 		from := recMessage.Message.Text
 
-		builder.WithText("2️⃣ Ко скольки часам тебе нужно быть на месте? (Напиши в формате ЧЧ:ММ)")
+		builder.WithText("2️⃣ К скольким часам тебе нужно быть на месте? (Напиши в формате ЧЧ:ММ)")
 		if err := h.sendMessage(ctx, builder); err != nil {
 			return
 		}
