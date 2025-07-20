@@ -13,7 +13,6 @@ import (
 	txman "github.com/defany/db/v2/tx_manager"
 	"github.com/defany/platcom/pkg/closer"
 	"github.com/defany/slogger/pkg/logger/sl"
-	"github.com/exaring/otelpgx"
 	"github.com/gookit/goutil/timex"
 	"github.com/jackc/pgx/v5"
 	"github.com/riverqueue/river"
@@ -38,10 +37,6 @@ func (d *DI) Postgres(ctx context.Context) postgres.Postgres {
 
 		pg, err := postgres.NewPostgres(ctx, d.Log(ctx), pcfg)
 		if err != nil {
-			d.mustExit(err)
-		}
-
-		if err := otelpgx.RecordStats(pg.Pool()); err != nil {
 			d.mustExit(err)
 		}
 
